@@ -1,6 +1,6 @@
 {
   "mappings": [
-    "/content/intouch-ue/en-eds/:/",
-    "/content/intouch-ue/en-eds/configuration:/.helix/config.json"
+    "/content/intouch-eds/:/",
+    "/content/intouch-eds/configuration:/.helix/config.json"
   ]
 }
