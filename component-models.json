@@ -213,7 +213,7 @@
     "id": "aem-content-fragment",
     "fields": [
       {
-        "component": "title",
+        "component": "text",
         "valueType": "string",
         "name": "cfTitle",
         "value": "",
