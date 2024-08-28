@@ -161,8 +161,7 @@
                 "template": {
                   "name": "AEM Content Fragment",
                   "model": "aem-content-fragment",
-                  "cfTitle": "Fragment Heading",
-                  "type": "h1"
+                  "cfTitle": "Fragment Heading"
                 }
               }
             }

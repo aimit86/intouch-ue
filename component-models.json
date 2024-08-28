@@ -213,51 +213,18 @@
     "id": "aem-content-fragment",
     "fields": [
       {
+        "component": "title",
+        "valueType": "string",
+        "name": "cfTitle",
+        "value": "",
+        "label": "CF Title"
+      },
+      {
         "component": "aem-content-fragment",
         "name": "picker",
         "label": "Content Fragment Picker",
         "valueType": "string",
         "variationName": "contentFragmentVariation"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "cfTitle",
-        "value": "",
-        "label": "Text"
-      },
-      {
-        "component": "select",
-        "name": "type",
-        "value": "h1",
-        "label": "Type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "h1",
-            "value": "h1"
-          },
-          {
-            "name": "h2",
-            "value": "h2"
-          },
-          {
-            "name": "h3",
-            "value": "h3"
-          },
-          {
-            "name": "h4",
-            "value": "h4"
-          },
-          {
-            "name": "h5",
-            "value": "h5"
-          },
-          {
-            "name": "h6",
-            "value": "h6"
-          }
-        ]
       }
     ]
   }
