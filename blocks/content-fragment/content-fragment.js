@@ -7,10 +7,11 @@ import {
   } from '../../scripts/aem.js';
   
   export async function loadContentFragment(path) {
+    const pubUrl = 'https://publish-p43602-e1429195.adobeaemcloud.com';
     if (path && path.startsWith('/')) {
       // eslint-disable-next-line no-param-reassign
       path = path.replace(/(\.plain)?\.html/, '');
-      path = path.replace('/content/dam/', '/api/assets/');
+      path = pubUrl + path.replace('/content/dam/', '/api/assets/');
       const resp = await fetch(`${path}.json`);
       if (resp.ok) {
         const main = document.createElement('main');
