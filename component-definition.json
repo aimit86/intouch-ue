@@ -159,7 +159,7 @@
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "AEM Content Fragment",
+                  "name": "AEM Content Fragments",
                   "model": "aem-content-fragment"
                 }
               }
