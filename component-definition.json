@@ -152,7 +152,7 @@
           }
         },
         {
-          "title": "AEM Content Fragment",
+          "title": "AEM Content Fragments",
           "id": "aem-content-fragment",
           "plugins": {
             "xwalk": {
