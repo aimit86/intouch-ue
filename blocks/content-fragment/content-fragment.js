@@ -12,11 +12,29 @@ import {
       // eslint-disable-next-line no-param-reassign
       path = path.replace(/(\.plain)?\.html/, '');
       path = pubUrl + path.replace('/content/dam/', '/api/assets/');
-      const resp = await fetch(`${path}.json`, {mode:'no-cors'});
+      const resp = await fetch(`${path}.json`);
+      
       if (resp.ok) {
         const main = document.createElement('main');
-        const jsonResp = await resp.text();
-        main.innerHTML = await resp.text();
+        const jsonRespStr = await resp.text();
+        const jsonRespMap = JSON.parse(jsonRespStr);
+        const parentDiv = document.createElement('div');
+        main.appendChild(parentDiv);
+        //Iterate Over each field names based on the element order
+        for(let attrName in jsonRespMap.properties.elementsOrder){
+          let fldName = jsonRespMap.properties.elementsOrder[attrName];
+          //console.log(fldName);
+          console.log(jsonRespMap.properties.elements[fldName].title);
+          const topDiv = document.createElement('div');
+          parentDiv.appendChild(topDiv);
+          const labelDiv = document.createElement('div');
+          labelDiv.textContent = (jsonRespMap.properties.elements[fldName].title);
+          topDiv.appendChild(labelDiv);
+          const valueDiv = document.createElement('div');
+          valueDiv.textContent = (jsonRespMap.properties.elements[fldName].value);
+          topDiv.appendChild(valueDiv);
+        }
+        //main.innerHTML = jsonRespStr;
   
         // reset base path for media to fragment base
         const resetAttributeBase = (tag, attr) => {
