@@ -12,7 +12,7 @@ import {
       // eslint-disable-next-line no-param-reassign
       path = path.replace(/(\.plain)?\.html/, '');
       path = pubUrl + path.replace('/content/dam/', '/api/assets/');
-      const resp = await fetch(`${path}.json`);
+      const resp = await fetch(`${path}.json`, {mode:'no-cors'});
       if (resp.ok) {
         const main = document.createElement('main');
         const jsonResp = await resp.text();
