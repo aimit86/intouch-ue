@@ -227,5 +227,17 @@
         "variationName": "contentFragmentVariation"
       }
     ]
+  },
+  {
+    "id": "exp-fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "AEM Expereince Content Picker",
+        "value": "",
+        "valueType": "string"
+      }
+    ]
   }
 ]

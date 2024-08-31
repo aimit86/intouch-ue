@@ -152,14 +152,14 @@
           }
         },
         {
-          "title": "Content Fragment -title",
+          "title": "Content Fragment",
           "id": "content-fragment",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Content Fragment-name",
+                  "name": "Content Fragment",
                   "model": "content-fragment",
                   "cfTitle":"Content Fragment",
                   "contentFragmentVariation":""
@@ -167,7 +167,22 @@
               }
             }
           }
-        }
+        },
+        {
+          "title": "Exp Fragment",
+          "id": "exp-fragment",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Exp Fragment",
+                  "model": "exp-fragment"
+                }
+              }
+            }
+          }
+        },
       ]
     }
   ]
