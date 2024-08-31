@@ -29,7 +29,8 @@
       "cards",
       "columns",
       "fragment",
-      "content-fragment"
+      "content-fragment",
+      "exp-fragment"
     ]
   },
   {
