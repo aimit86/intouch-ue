@@ -232,9 +232,9 @@
     "id": "exp-fragment",
     "fields": [
       {
-        "component": "aem-content",
-        "name": "reference",
-        "label": "AEM Expereince Content Picker",
+        "component": "aem-experience-fragment",
+        "name": "xf-reference",
+        "label": "AEM Experience Content Picker",
         "value": "",
         "valueType": "string"
       }
