@@ -16,7 +16,17 @@ import {
       if (resp.ok) {
         const main = document.createElement('main');
         main.innerHTML = await resp.text();
-  
+        
+        //Update the hrefs and remove '.html'
+        main.querySelectorAll('[href]').forEach((elem) => {
+          var href = elem.getAttribute('href');
+          if(href && href.startsWith('/content/intouch-eds/')){
+            href = href.replace('/content/intouch-eds/', '/').replace(/(\.plain)?\.html/, '');
+            elem.setAttribute('href', href);
+            //console.log(hrefVal);
+          }
+        });
+
         // reset base path for media to fragment base
         const resetAttributeBase = (tag, attr) => {
           main.querySelectorAll(`${tag}[${attr}^="./media_"]`).forEach((elem) => {
@@ -25,7 +35,7 @@ import {
         };
         resetAttributeBase('img', 'src');
         resetAttributeBase('source', 'srcset');
-  
+        
         decorateMain(main);
         await loadBlocks(main);
         return main;
