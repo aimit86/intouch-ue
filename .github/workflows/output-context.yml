@@ -2,7 +2,15 @@ name: Output Information
 on: workflow_dispatch
 jobs:
   info:
+    name: Get Information of Github Context
     runs-on: ubuntu-latest
     steps:
       - name: Output github Context
         run: echo "${{ toJSON(github) }}"
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+     #- run: npm ci
+     #- run: npm run lint
